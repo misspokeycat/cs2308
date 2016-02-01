@@ -1,5 +1,12 @@
-//Programming Assingment 1
-//Gradebook
+// File Name: assign1_l_d130.cpp
+//
+// Author: Luke D'Alfonso
+// Date: 2/1/2016
+// Assignment Number: 1
+// CS 2308.251 Spring 2016
+// Instructor: Jill Seaman
+//
+// A simple gradebook app.
 
 //Imports
 #include <iostream>
