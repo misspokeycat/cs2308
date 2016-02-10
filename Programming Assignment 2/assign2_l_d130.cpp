@@ -69,15 +69,35 @@ int getProdIndex (product inv[], int size, string target){
 void addProduct(product inv[], int &products){
     //Input data.
     product newProd;
-    cout << "Enter the new product name:" << endl;
-    cin >> ws;
-    getline(cin, newProd.name);
+    do {
+        cout << "Enter the new product name:" << endl;
+        cin >> ws;
+        getline(cin, newProd.name);
+
+        //verify uniqueness
+        if (getProdIndex(inv, products, newProd.name) != -1){
+            cout << "Product already exists." << endl;
+        }
+    } while(getProdIndex(inv, products, newProd.name) != -1);
+
     cout << "Enter the locator (no spaces):" << endl;
     cin >> newProd.locationID;
-    cout << "Enter the quantity (0 or more):" << endl;
-    cin >> newProd.qty;
-    cout << "Enter the price (greater than 0):" << endl;
-    cin >> newProd.price;
+
+    do {
+        cout << "Enter the quantity (0 or more):" << endl;
+        cin >> newProd.qty;
+        if (newProd.qty < 0){
+            cout << "Quantity must be positive." << endl;
+        }
+    } while(newProd.qty < 0);
+
+    do {
+        cout << "Enter the price (greater than 0):" << endl;
+        cin >> newProd.price;
+        if (newProd.price <= 0){
+            cout << "Price must be greater then 0." << endl;
+        }
+    } while (newProd.price <= 0);
 
     //Add product to the array.
     inv[products] = newProd;
