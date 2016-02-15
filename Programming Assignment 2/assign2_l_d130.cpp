@@ -153,8 +153,14 @@ void adjustQuantity(product inv[], int products) {
         return;
     }
 
-    cout << "Enter new quantity:" << endl;
-    cin >> inv[index].qty;
+    //Ensure new value for quantity is valid.
+    do {
+        cout << "Enter new quantity:" << endl;
+        cin >> inv[index].qty;
+        if (inv[index].qty < 0) {
+            cout << "Quantity must be positive." << endl;
+        }
+    } while (inv[index].qty < 0);
 }
 
 //Display a product
