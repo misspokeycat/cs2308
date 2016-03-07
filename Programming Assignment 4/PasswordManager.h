@@ -14,14 +14,14 @@
 
 using namespace std;
 class PasswordManager{
-    string password;
     private:
-        string encrypt(string pass);
-        bool verifyPassword(string pass);
+        string password;
+        string encrypt(string pass) const;
+        bool verifyPassword(string pass) const;
     public:
         void setEncryptedPassword(string pass);
-        string getEncryptedPassword();
+        string getEncryptedPassword() const;
         bool setNewPassword(string pass);
-        bool validatePassword(string pass);
+        bool validatePassword(string pass) const;
 };
 #endif
