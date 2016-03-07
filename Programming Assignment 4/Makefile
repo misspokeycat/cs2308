@@ -1,2 +1,2 @@
-PasswordManager:
-	g++ PasswordDriver.cpp PasswordManager.cpp -o PasswordManager
+password:
+	g++ PasswordDriver.cpp PasswordManager.cpp -o password
