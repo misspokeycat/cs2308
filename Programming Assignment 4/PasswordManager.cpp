@@ -18,7 +18,7 @@ using namespace std;
 // returns: the encrypted password
 // pass - the password to encrypt
 //***********************************************************
-string PasswordManager::encrypt(string pass){
+string PasswordManager::encrypt(string pass) const{
     //Iterate through all characters in string, and perform encrypt on them
     for(int x=0; x<pass.length(); x++){
         pass[x] = ((pass[x] - 33) + 10) % 94 + 33;
@@ -33,7 +33,7 @@ string PasswordManager::encrypt(string pass){
 // returns true if complexity requirements mets, false otherwise
 // pass - the password (unencrypted) to check
 //***********************************************************
-bool PasswordManager::verifyPassword(string pass){
+bool PasswordManager::verifyPassword(string pass) const{
     //Verify Length
     if (pass.length() < 8){
         return false;
@@ -70,7 +70,7 @@ void PasswordManager::setEncryptedPassword(string pass){
 // getEncryptedPassword: getter for our password
 // returns: the encrypted password
 //***********************************************************
-string PasswordManager::getEncryptedPassword(){
+string PasswordManager::getEncryptedPassword() const{
     return password;
 }
 
@@ -94,7 +94,7 @@ bool PasswordManager::setNewPassword(string pass){
 // returns: true if encrypted pass is same as stored pass, false otherwise
 // pass - the password (unencrypted) to test against the stored password
 //***********************************************************
-bool PasswordManager::validatePassword(string pass){
+bool PasswordManager::validatePassword(string pass) const{
     if (encrypt(pass) == password){
         return true;
     } else {
