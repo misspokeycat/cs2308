@@ -51,7 +51,11 @@ int main(){
                 //Save password to disk and exit.
                 ofstream fout;
                 fout.open("password.txt");
-                fout << pm.getEncryptedPassword();
+                if (pm.getEncryptedPassword != ""){
+                    fout << pm.getEncryptedPassword();
+                } else {
+                    fout << "abc123@@@";
+                }
                 break;
         }
     }
