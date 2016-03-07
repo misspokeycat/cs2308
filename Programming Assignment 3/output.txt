@@ -1,0 +1,24 @@
+testing median:
+test data: 1 2 3 4 5 6 7 8 9
+Expected median: 5
+Actual median: 5
+test data: 1 2 3 4 5 6 7 8
+Expected median: 4.5
+Actual median: 4.5
+testing pizza for 25 people:
+Expected result: 112.80 p: 9 s: 3
+Actual results : 112.80 p: 9 s: 3
+testing resize:
+test data: 1 2 3 4 5 6 7 8 9 0
+Expected result: 1 2 3 4 5 6 7 8 9 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+Actual result: 1 2 3 4 5 6 7 8 9 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+testing shiftX:
+test data: 1 2 3 4 5 6 7 8 9 0
+and 4
+Expected result: -1 -1 -1 -1 1 2 3 4 5 6 7 8 9 0
+Actual result: -1 -1 -1 -1 1 2 3 4 5 6 7 8 9 0 
+testing subArray:
+test data: 1 2 3 4 5 6 7 8 9 0
+start: 5 length: 4
+Expected result: 6 7 8 9
+Actual result: 6 7 8 9 
