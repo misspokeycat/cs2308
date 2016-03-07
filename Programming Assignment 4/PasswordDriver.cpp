@@ -1,3 +1,13 @@
+// File Name: PasswordDriver.cpp
+// 
+// Author: Luke D'Alfonso
+// Date: 3/6/2016
+// Assignment Number: 4
+// CS 2308.251 Spring 2016
+// Instructor: Jill Seaman 
+// 
+// Driver file to test PasswordManager.
+
 #include <iostream>
 #include <fstream>
 #include "PasswordManager.h"
@@ -7,7 +17,7 @@ using namespace std;
 int main(){
     PasswordManager pm;  //An instance of PasswordManager.
     char choice = 'A';  //The choice we will use for the loop.
-    string pass;
+    string pass; //Something to store our password (unencrypted) before sending to a function
     while (choice != 'C'){
         cout << "Password Utilities:" << endl;
         cout << "A. Change Password" << endl;

@@ -1,3 +1,13 @@
+// File Name: PasswordManager.h
+// 
+// Author: Luke D'Alfonso
+// Date: 3/6/2016
+// Assignment Number: 4
+// CS 2308.251 Spring 2016
+// Instructor: Jill Seaman 
+// 
+// Header file for password manager.
+
 #ifndef PasswordManager_h
 #define PasswordManager_h
 #include <string>
