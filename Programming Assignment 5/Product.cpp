@@ -41,7 +41,7 @@ string Product::getLocator(){
 }
 
 void Product::setLocator(string newval){
-    locator = newval
+    locator = newval;
 }
 
 int Product::getQuantity(){
@@ -70,7 +70,7 @@ bool Product::isEqual(Product pr){
 //name is greater than the others, OR if they have the same product names, if this
 //product’s locator is greater than the other’s locator.
 bool Product::greaterThan(Product pr){
-    if (name == pr.getName){
+    if (name == pr.getName()){
         return (locator > pr.getLocator());
     } else { 
         return (name > pr.getName());

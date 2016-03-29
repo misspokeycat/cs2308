@@ -8,3 +8,6 @@ PasswordDriver.o: PasswordDriver.cpp PasswordManager.h
 
 PasswordManager: PasswordManager.cpp PasswordManager.h
 	g++ -c PasswordManager.cpp
+
+clean:
+	rm password PasswordManager.o PasswordDriver.o password.txt
