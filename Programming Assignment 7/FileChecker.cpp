@@ -27,13 +27,15 @@ char revChar(char c){
 int main() {
     //Prompt filename.
     cout << "Enter filename to check: ";
-    string filename = "";
+    string filename;
     cin >> filename;
 
     //Load file, or return if we can't do that.
     // declare input file stream varaible and open file
     ifstream fin;
-    fin.open(filename);
+
+    //For some reason, the compiler hates it if our filename is a c++ string instead of a c string
+    fin.open(filename.c_str());
 
     if (!fin){
         cout << "ERROR - File failed to open" << endl;

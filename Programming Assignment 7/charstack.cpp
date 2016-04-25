@@ -9,7 +9,7 @@
 // A simple character stack.
 //
 
-#include "CharStack.h"
+#include "charstack.h"
 
 using namespace std;
 
