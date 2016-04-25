@@ -10,6 +10,7 @@
 //
 
 #include "charstack.h"
+#include <cassert>
 
 using namespace std;
 
@@ -43,6 +44,7 @@ bool CharStack::isFull() const {
 //returns: the popped value
 ////////////
 char CharStack::pop() {
+    assert(!isEmpty());
     char toPop = stackString.at(0);
     stackString = stackString.substr(1, sizeof(stackString));
     return toPop;
@@ -55,5 +57,6 @@ char CharStack::pop() {
 //returns: the popped value
 ////////////
 void CharStack::push(char c) {
+    assert(!isFull());
     stackString.insert(0, 1, c); //Inserts at position 0, 1 instance, of char c
 }
